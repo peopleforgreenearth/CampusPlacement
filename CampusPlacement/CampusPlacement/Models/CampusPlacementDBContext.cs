@@ -1,18 +1,18 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using ClassLibrary1.Models.Mapping;
+using CampusPlacement.Models.Mapping;
 
-namespace ClassLibrary1.Models
+namespace CampusPlacement.Models
 {
-    public partial class JSSKDBContext : DbContext
+    public partial class CampusPlacementDBContext : DbContext
     {
-        static JSSKDBContext()
+        static CampusPlacementDBContext()
         {
-            Database.SetInitializer<JSSKDBContext>(null);
+            Database.SetInitializer<CampusPlacementDBContext>(null);
         }
 
-        public JSSKDBContext()
-            : base("Name=JSSKDBContext")
+        public CampusPlacementDBContext()
+            : base("Name=CampusPlacementDBContext")
         {
         }
 

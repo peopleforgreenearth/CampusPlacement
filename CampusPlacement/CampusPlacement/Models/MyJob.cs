@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ClassLibrary1.Models
+namespace CampusPlacement.Models
 {
     public partial class MyJob
     {

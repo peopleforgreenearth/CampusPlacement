@@ -123,7 +123,7 @@
     <Compile Include="Models\ExperienceLevel.cs" />
     <Compile Include="Models\JobPosting.cs" />
     <Compile Include="Models\JobType.cs" />
-    <Compile Include="Models\JSSKDBContext.cs" />
+    <Compile Include="Models\CampusPlacementDBContext.cs" />
     <Compile Include="Models\Mapping\CompanyMap.cs" />
     <Compile Include="Models\Mapping\CountryMap.cs" />
     <Compile Include="Models\Mapping\EducationLevelMap.cs" />

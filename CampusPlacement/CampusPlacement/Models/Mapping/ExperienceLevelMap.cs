@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 
-namespace ClassLibrary1.Models.Mapping
+namespace CampusPlacement.Models.Mapping
 {
     public class ExperienceLevelMap : EntityTypeConfiguration<ExperienceLevel>
     {
