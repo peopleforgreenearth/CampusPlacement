@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CampusPlacement.Models.ExperienceLevel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperienceLevelName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienceLevelName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExperienceLevelID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExperienceLevelID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExperienceLevelID })
+        </td>
+    </tr>
+}
+
+</table>

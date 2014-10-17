@@ -3,3 +3,8 @@ G:\CampusPlacement\CampusPlacement\TestingOnly\bin\Debug\TestingOnly.pdb
 G:\CampusPlacement\CampusPlacement\TestingOnly\obj\Debug\TestingOnly.csprojResolveAssemblyReference.cache
 G:\CampusPlacement\CampusPlacement\TestingOnly\obj\Debug\TestingOnly.dll
 G:\CampusPlacement\CampusPlacement\TestingOnly\obj\Debug\TestingOnly.pdb
+E:\JobSite\CampusPlacement\CampusPlacement\TestingOnly\bin\Debug\TestingOnly.dll
+E:\JobSite\CampusPlacement\CampusPlacement\TestingOnly\bin\Debug\TestingOnly.pdb
+E:\JobSite\CampusPlacement\CampusPlacement\TestingOnly\obj\Debug\TestingOnly.csprojResolveAssemblyReference.cache
+E:\JobSite\CampusPlacement\CampusPlacement\TestingOnly\obj\Debug\TestingOnly.dll
+E:\JobSite\CampusPlacement\CampusPlacement\TestingOnly\obj\Debug\TestingOnly.pdb

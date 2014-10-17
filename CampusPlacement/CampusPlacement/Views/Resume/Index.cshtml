@@ -1,0 +1,111 @@
+﻿@model IEnumerable<CampusPlacement.Models.Resume>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetStateID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetCountryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelocationCountryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetJobTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EducationLevelID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperienceLevelID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResumeText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoverLetterText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubcategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetStateID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetCountryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelocationCountryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetJobTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EducationLevelID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienceLevelID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResumeText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoverLetterText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubcategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResumeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResumeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResumeID })
+        </td>
+    </tr>
+}
+
+</table>

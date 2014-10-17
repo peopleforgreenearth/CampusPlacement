@@ -1,0 +1,136 @@
+﻿@model CampusPlacement.Models.Resume
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Resume</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetStateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetStateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetCountryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetCountryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelocationCountryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelocationCountryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetJobTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetJobTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EducationLevelID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EducationLevelID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExperienceLevelID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperienceLevelID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumeText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumeText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoverLetterText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoverLetterText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubcategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubcategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
