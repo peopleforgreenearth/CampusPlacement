@@ -12,13 +12,22 @@ namespace CampusPlacement.Models.Mapping
 
             // Properties
             this.Property(t => t.UserName)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.JobTitle)
+                .IsRequired()
                 .HasMaxLength(255);
 
             this.Property(t => t.TargetCity)
+                .IsRequired()
                 .HasMaxLength(50);
+
+            this.Property(t => t.ResumeText)
+                .IsRequired();
+
+            this.Property(t => t.CoverLetterText)
+                .IsRequired();
 
             // Table & Column Mappings
             this.ToTable("Resumes");
@@ -37,6 +46,21 @@ namespace CampusPlacement.Models.Mapping
             this.Property(t => t.CategoryID).HasColumnName("CategoryID");
             this.Property(t => t.SubcategoryID).HasColumnName("SubcategoryID");
             this.Property(t => t.PostDate).HasColumnName("PostDate");
+
+            // Relationships
+            this.HasRequired(t => t.Country)
+                .WithMany(t => t.Resumes)
+                .HasForeignKey(d => d.TargetCountryID);
+            this.HasRequired(t => t.EducationLevel)
+                .WithMany(t => t.Resumes)
+                .HasForeignKey(d => d.EducationLevelID);
+            this.HasRequired(t => t.ExperienceLevel)
+                .WithMany(t => t.Resumes)
+                .HasForeignKey(d => d.ExperienceLevelID);
+            this.HasRequired(t => t.JobType)
+                .WithMany(t => t.Resumes)
+                .HasForeignKey(d => d.TargetJobTypeID);
+
         }
     }
 }

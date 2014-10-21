@@ -96,9 +96,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CampusPlacementDB.mdf" />
-    <Content Include="App_Data\CampusPlacementDB_log.ldf">
-      <DependentUpon>CampusPlacementDB.mdf</DependentUpon>
+    <Content Include="App_Data\campusdb.mdf" />
+    <Content Include="App_Data\campusdb_log.ldf">
+      <DependentUpon>campusdb.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
@@ -109,7 +109,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -131,13 +133,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CampusPlacementDBContext.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\EducationLevel.cs" />
     <Compile Include="Models\ExperienceLevel.cs" />
     <Compile Include="Models\JobPosting.cs" />
     <Compile Include="Models\JobType.cs" />
-    <Compile Include="Models\CampusPlacementDBContext.cs" />
     <Compile Include="Models\Mapping\CompanyMap.cs" />
     <Compile Include="Models\Mapping\CountryMap.cs" />
     <Compile Include="Models\Mapping\EducationLevelMap.cs" />
@@ -220,6 +222,8 @@
     <Content Include="Views\State\Details.cshtml" />
     <Content Include="Views\State\Edit.cshtml" />
     <Content Include="Views\State\Index.cshtml" />
+    <Content Include="Views\Jobseeker\Search.cshtml" />
+    <Content Include="Views\Jobseeker\SearchJobs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -229,7 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Employer\" />
-    <Folder Include="Views\Jobseeker\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -244,7 +247,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>2949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1958/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

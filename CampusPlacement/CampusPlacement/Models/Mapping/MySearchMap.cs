@@ -12,12 +12,15 @@ namespace CampusPlacement.Models.Mapping
 
             // Properties
             this.Property(t => t.SearchCriteria)
+                .IsRequired()
                 .HasMaxLength(255);
 
             this.Property(t => t.City)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.UserName)
+                .IsRequired()
                 .HasMaxLength(50);
 
             // Table & Column Mappings

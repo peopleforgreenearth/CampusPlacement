@@ -12,21 +12,30 @@ namespace CampusPlacement.Models.Mapping
 
             // Properties
             this.Property(t => t.ContactPerson)
+                .IsRequired()
                 .HasMaxLength(255);
 
             this.Property(t => t.Title)
+                .IsRequired()
                 .HasMaxLength(255);
 
             this.Property(t => t.Department)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.JobCode)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.City)
+                .IsRequired()
                 .HasMaxLength(50);
 
+            this.Property(t => t.JobDescription)
+                .IsRequired();
+
             this.Property(t => t.PostedBy)
+                .IsRequired()
                 .HasMaxLength(50);
 
             // Table & Column Mappings
@@ -47,6 +56,21 @@ namespace CampusPlacement.Models.Mapping
             this.Property(t => t.JobDescription).HasColumnName("JobDescription");
             this.Property(t => t.PostingDate).HasColumnName("PostingDate");
             this.Property(t => t.PostedBy).HasColumnName("PostedBy");
+
+            // Relationships
+            this.HasRequired(t => t.Company)
+                .WithMany(t => t.JobPostings)
+                .HasForeignKey(d => d.CompanyID);
+            this.HasRequired(t => t.EducationLevel)
+                .WithMany(t => t.JobPostings)
+                .HasForeignKey(d => d.EducationLevelID);
+            this.HasRequired(t => t.JobType)
+                .WithMany(t => t.JobPostings)
+                .HasForeignKey(d => d.JobTypeID);
+            this.HasRequired(t => t.State)
+                .WithMany(t => t.JobPostings)
+                .HasForeignKey(d => d.StateID);
+
         }
     }
 }

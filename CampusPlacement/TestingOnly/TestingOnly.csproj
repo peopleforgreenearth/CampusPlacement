@@ -56,7 +56,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\campusdbContext.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\EducationLevel.cs" />
+    <Compile Include="Models\ExperienceLevel.cs" />
+    <Compile Include="Models\JobPosting.cs" />
+    <Compile Include="Models\JobType.cs" />
+    <Compile Include="Models\Mapping\CompanyMap.cs" />
+    <Compile Include="Models\Mapping\CountryMap.cs" />
+    <Compile Include="Models\Mapping\EducationLevelMap.cs" />
+    <Compile Include="Models\Mapping\ExperienceLevelMap.cs" />
+    <Compile Include="Models\Mapping\JobPostingMap.cs" />
+    <Compile Include="Models\Mapping\JobTypeMap.cs" />
+    <Compile Include="Models\Mapping\MyJobMap.cs" />
+    <Compile Include="Models\Mapping\MyResumeMap.cs" />
+    <Compile Include="Models\Mapping\MySearchMap.cs" />
+    <Compile Include="Models\Mapping\ResumeMap.cs" />
+    <Compile Include="Models\Mapping\StateMap.cs" />
+    <Compile Include="Models\Mapping\sysdiagramMap.cs" />
+    <Compile Include="Models\MyJob.cs" />
+    <Compile Include="Models\MyResume.cs" />
+    <Compile Include="Models\MySearch.cs" />
+    <Compile Include="Models\Resume.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

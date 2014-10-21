@@ -12,6 +12,7 @@ namespace CampusPlacement.Models.Mapping
 
             // Properties
             this.Property(t => t.StateName)
+                .IsRequired()
                 .HasMaxLength(255);
 
             // Table & Column Mappings

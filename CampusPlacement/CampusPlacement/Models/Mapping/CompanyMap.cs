@@ -12,24 +12,30 @@ namespace CampusPlacement.Models.Mapping
 
             // Properties
             this.Property(t => t.UserName)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.CompanyName)
+                .IsRequired()
                 .HasMaxLength(255);
 
             this.Property(t => t.Address1)
+                .IsRequired()
                 .HasMaxLength(255);
 
             this.Property(t => t.Address2)
                 .HasMaxLength(255);
 
             this.Property(t => t.City)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.Zip)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.Phone)
+                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.Fax)
@@ -57,6 +63,12 @@ namespace CampusPlacement.Models.Mapping
             this.Property(t => t.CompanyEmail).HasColumnName("CompanyEmail");
             this.Property(t => t.WebSiteUrl).HasColumnName("WebSiteUrl");
             this.Property(t => t.CompanyProfile).HasColumnName("CompanyProfile");
+
+            // Relationships
+            this.HasRequired(t => t.Country)
+                .WithMany(t => t.Companies)
+                .HasForeignKey(d => d.CountryID);
+
         }
     }
 }

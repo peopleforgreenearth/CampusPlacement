@@ -1,0 +1,49 @@
+﻿@model  IEnumerable<CampusPlacement.Models.JobPosting>
+
+@{
+    ViewBag.Title = "SearchJobs";
+    //WebGrid grid = new WebGrid(Model, rowsPerPage: 5);
+}
+
+<h2>Search Jobs</h2>
+
+
+<table>
+    <tr>
+        <td>
+            PostingDate
+        </td>
+        <td>
+            Title
+        </td>
+        <td>
+            Location
+        </td>
+        <td>
+            Company
+        </td>
+
+    </tr>
+    @foreach (var item in Model.ToList())
+    {
+        <tr>
+            <td>
+                @item.PostingDate
+            </td>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.City
+            </td>
+            <td>
+                @item.Company.CompanyName
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
