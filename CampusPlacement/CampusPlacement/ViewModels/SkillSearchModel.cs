@@ -11,9 +11,13 @@ namespace CampusPlacement.ViewModels
         [Key]
         public int Id { get; set; }
         public string Skills { get; set; }
-        public virtual Models.Country Country { get; set; }
-        public virtual Models.State State { get; set; }
+        public int CountryID { get; set; }
+        public int StateID { get; set; }
         public string City { get; set; }
+
+        public  Models.Country Country { get; set; }
+        public  Models.State State { get; set; }
+       
 
     }
 }

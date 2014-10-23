@@ -1,0 +1,125 @@
+﻿@*@model CampusPlacement.ViewModels.JobPostingDetailsModel*@
+@{
+    ViewBag.Title = "PostingDetail";
+    var jobMDL = ViewBag.JobModel as CampusPlacement.ViewModels.JobPostingDetailsModel;
+}
+
+<h2>PostingDetail</h2>
+
+
+<div class="form-horizontal">
+    <h4>View Job Posting</h4>
+    <hr />
+    <h5>Contact Details</h5>
+
+    <div class="form-group">
+        Company :
+            <div class="col-md-10">
+                @jobMDL.CompanyName
+                <a>[View Profile]</a>
+            </div>
+    </div>
+
+    <div class="form-group">
+        Contact Person :
+            <div class="col-md-10">
+                @jobMDL.ContactPerson
+            </div>
+    </div>
+
+    <h5>Job Details</h5>
+    <div class="form-group">
+        Job Title :
+            <div class="col-md-10">
+               @jobMDL.Title
+            </div>
+    </div>
+
+    <div class="form-group">
+        Description :
+            <div class="col-md-10">
+                @jobMDL.JobDescription
+            </div>
+    </div>
+
+    <div class="form-group">
+        Job Type :
+            <div class="col-md-10">
+                @jobMDL.JobTypeName
+            </div>
+    </div>
+
+    <div class="form-group">
+        Department :
+            <div class="col-md-10">
+                @jobMDL.Department
+            </div>
+    </div>
+
+    <div class="form-group">
+        Job Code :
+            <div class="col-md-10">
+                @jobMDL.JobCode
+            </div>
+    </div>
+
+    <div class="form-group">
+        Education Level :
+            <div class="col-md-10">
+                @jobMDL.EducationLevelName
+            </div>
+    </div>
+
+    <h5>Location</h5>
+
+    <div class="form-group">
+        City :
+            <div class="col-md-10">
+                @jobMDL.City
+            </div>
+    </div>
+
+    <div class="form-group">
+        State :
+            <div class="col-md-10">
+                @jobMDL.StateName
+            </div>
+    </div>
+
+    <div class="form-group">
+        Country :
+            <div class="col-md-10">
+               @jobMDL.CountryName
+            </div>
+    </div>
+
+    <h5>Salary Details</h5>
+
+    <div class="form-group">
+        Min. Salary :
+            <div class="col-md-10">
+               @jobMDL.MinSalary
+            </div>
+    </div>
+
+    <div class="form-group">
+        Max. Salary :
+            <div class="col-md-10">
+                @jobMDL.MaxSalary
+            </div>
+    </div>
+
+    <div class="form-group">
+        Posting Date :
+            <div class="col-md-10">
+               @jobMDL.PostingDate
+            </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Add to favourite" class="btn btn-default" />
+        </div>
+    </div>
+
+</div>

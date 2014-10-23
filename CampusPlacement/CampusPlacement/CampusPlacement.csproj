@@ -157,6 +157,7 @@
     <Compile Include="Models\Resume.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\JobPostingDetailsModel.cs" />
     <Compile Include="ViewModels\SkillSearchModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +225,7 @@
     <Content Include="Views\State\Index.cshtml" />
     <Content Include="Views\Jobseeker\Search.cshtml" />
     <Content Include="Views\Jobseeker\SearchJobs.cshtml" />
+    <Content Include="Views\Jobseeker\PostingDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

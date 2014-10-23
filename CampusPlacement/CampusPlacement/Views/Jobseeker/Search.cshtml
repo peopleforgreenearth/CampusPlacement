@@ -3,6 +3,11 @@
 
 
 @{
+    
+    var dbContext = new CampusPlacement.Models.CampusPlacementDBContext();
+    
+    //var states = dbContext.States.ToList();
+   // var countries = ViewBag.CountryID;
     ViewBag.Title = "Search";
 }
 
@@ -12,6 +17,7 @@
 {
     @Html.AntiForgeryToken()
     
+  
     <div class="form-horizontal">
         <h4>Search Jobs</h4>
         <hr />
@@ -28,7 +34,7 @@
          <div class="form-group">
             @Html.LabelFor(model => model.Country, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Country)
+                @Html.DropDownList("CountryID", string.Empty)
                 @Html.ValidationMessageFor(model => model.Country)
             </div>
         </div>
@@ -36,7 +42,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.State)
+               @* @Html.EditorFor(model.State, states)*@
+
+                @Html.DropDownList("StateID", string.Empty)                
                 @Html.ValidationMessageFor(model => model.State)
             </div>
         </div>
